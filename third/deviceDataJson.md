@@ -69,6 +69,52 @@
 |-------|--------|----------|
 | 2 |    S230    |  综合训练架 |
 
+数据例子:
+```json
+[
+   {
+    "ecc": 1,   
+    "avgRfd": 105.65,
+    "energy": 8.99,
+    "maxRfd": 177.93,
+    "indexId": 0,
+    "maxLoad": 14.3,
+    "avgPower": 42.82,
+    "avgSpeed": 0.89,
+    "maxPower": 73.1,
+    "maxSpeed": 1.21,
+    "direction": 1,
+    "targetRfd": 0,
+    "indexGroup": "0-1689209666204",
+    "resistance": [
+        11,
+        11
+    ],
+    "targetLoad": 0,
+    "targetPower": 0
+    }
+]
+```
+参数说明:
+| 字段 | 说明                             |
+|---------|----------------------------------|
+| ecc   | 1 向心 2 离心 |
+| avgRfd | 平均Rfd |
+| energy | 消耗|
+| maxRfd | |
+| indexId | |
+| maxLoad | |
+| avgPower | |
+| avgSpeed | |
+| maxPower | |
+| maxSpeed | |
+| direction | |
+| targetRfd | |
+| indexGroup | |
+| resistance | |
+| targetLoad | |
+| targetPower | |
+
 
 ## T100-功率自行车
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称

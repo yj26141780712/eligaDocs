@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as s,U as e}from"./chunks/framework.a291127f.js";const y=JSON.parse('{"title":"获取token","description":"","frontmatter":{},"headers":[],"relativePath":"third/token.md","filePath":"third/token.md"}'),n={name:"third/token.md"},o=e("",12),l=[o];function p(r,c,d,D,i,h){return a(),s("div",null,l)}const u=t(n,[["render",p]]);export{y as __pageData,u as default};

@@ -24,29 +24,47 @@
 
 #### 返回说明
 
-正常情况下，返回如下(<a >查看设备数据结构</a>)：
+正常情况下，返回如下()：
 ```json
 {
     "code":"200",
     "message":"ok",
-    "data":{
-        "stime":"2022-01-01 00:00:00", 
-        "etime":"2022-01-01 00:00:00",
-        "etime":"2022-01-01 00:00:00",
-        "data":{
-            //不同设备返回data数据不同,
+    "data":[
+        {
+           "id": 2,
+           "userId":2,
+           "userName":"运动员1号",
+           "deviceType":"2",
+           "deviceSn":"T232-001",
+           "deviceName":"多功能训练器", 
+           "modeName":"恒力等张",
+           "actionName":"深蹲",
+           "stime":"2022-01-01 00:00:00", 
+           "etime":"2022-01-01 00:00:00",
+           "dataType":0,
+           "data":{
+             //不同设备返回data数据不同,
+           }   
         }
-    
-    }
+    ]
 }
 ```
+设备data: [设备训练数据结构](/third/deviceDataJson.html),[设备测试数据结构](/third/deviceTestDataJson.html)
 
 #### 参数说明
 
 | 返回字段 | 说明                             |
 |---------|----------------------------------|
-| code   | 返回结果状态。200：正常；其他：错误。 |
-| message| 错误说明                         |
-| data   | 返回数据                           |
-
+| code    | 返回结果状态。200：正常；其他：错误。|
+| message | 错误说明                        |
+| data    | 返回数据                        |
+| userId      | 运动员id                       |
+| userName    | 运动员名称                      |
+| deviceType    | 设备类型代码                  |
+| deviceSn    | 设备编号                      |
+| deviceName    | 设备名称                      |
+| stime   | 训练起始时间                        |
+| etime   | 训练结束时间                        |
+| dataType   | 数据类型 0 训练数据 1 测试数据                        |
+| data   | 设备数据                        |
 
