@@ -7,14 +7,14 @@ export default defineConfig({
   description: "Eliga开发文档描述",
   base: '/eligaDocs/', // 这是部署到github相关的配置 下面会讲
   locales: {
-    root: { label: 'English', link: 'https://cn.vitejs.dev' },
-    zh: { label: '简体中文', link: 'https://cn.vitejs.dev' },
+    root: { label: 'English', link: 'https://cn.vitejs.dev1' },
+    zh: { label: '简体中文', link: 'https://cn.vitejs.dev1' },
   },
   themeConfig: {
     nav: nav(),
     sidebar: sidebar(),
     editLink: {
-      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/main/:path',
+      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/dev/:path',
       text: '为此页提供修改建议',
     },
     outline: {
