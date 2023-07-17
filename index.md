@@ -11,5 +11,5 @@ hero:
       link: /third/deviceToThird.html
     - theme: alt
       text: 在github上查看
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/yj26141780712/eligaDocs
 ---
