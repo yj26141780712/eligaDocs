@@ -14,7 +14,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: sidebar(),
     editLink: {
-      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/dev/:path',
+      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/master/:path',
       text: '为此页提供修改建议',
     },
     outline: {
