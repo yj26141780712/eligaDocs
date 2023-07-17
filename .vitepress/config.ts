@@ -14,7 +14,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: sidebar(),
     editLink: {
-      pattern: 'https://github.com/vitejs/docs-cn/edit/main/:path',
+      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/main/:path',
       text: '为此页提供修改建议',
     },
     outline: {
