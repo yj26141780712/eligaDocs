@@ -100,7 +100,7 @@
 |---------|----------------------------------|
 | ecc   | 1 向心 2 离心 |
 | avgRfd | 平均Rfd |
-| energy | |
+| energy | 消耗|
 | maxRfd | |
 | indexId | |
 | maxLoad | |
