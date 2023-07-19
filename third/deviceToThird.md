@@ -80,7 +80,7 @@
 
 ## 数据接入流程
 
-- 第三方开发数据接收接口，接口地址:{配置接口地址}/uploadReport
+- 第三方开发数据接收接口
 - 接口数据如下([查看设备data](/third/deviceDataJson.html#t232-%E6%97%A0%E8%BD%A8%E8%BF%B9%E5%8A%9F%E8%83%BD%E8%AE%AD%E7%BB%83%E5%99%A8)):
 ```json
 {
