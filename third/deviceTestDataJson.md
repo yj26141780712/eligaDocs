@@ -1,4 +1,4 @@
-# 设备训练数据结构
+# 设备测试数据结构
 
 设备的数据结构
 
@@ -19,49 +19,44 @@
 
 数据例子:
 ```json
-[
-   {
-    "ecc": 1,   
-    "avgRfd": 105.65,
-    "energy": 8.99,
-    "maxRfd": 177.93,
-    "indexId": 0,
-    "maxLoad": 14.3,
-    "avgPower": 42.82,
-    "avgSpeed": 0.89,
-    "maxPower": 73.1,
-    "maxSpeed": 1.21,
-    "direction": 1,
-    "targetRfd": 0,
-    "indexGroup": "0-1689209666204",
-    "resistance": [
-        11,
-        11
-    ],
-    "targetLoad": 0,
-    "targetPower": 0
-    }
-]
+{
+    "dataType" : 1, //0训练1测试
+    "actName" : "俯身飞鸟", //动作名称
+    "startTime": "2023-07-19 14:10:25",//开始训练时间
+    "endTime": "2023-07-19 14:10:40",//训练结束时间
+    "powerSet" : ["8.1","9.9","11.7","13.5","15.3","17.1"], //阻力设定
+    "powerReal" : ["27.1","26.2","28.2","25.1","30.6","27.1"], //阻力实际
+    "testData": [[332.5],[336.8],[356.3],[123.4],[478.3],[332.5]], //测试数据
+    "powerCurve" : [1,2], //功率曲线
+    "powerScatterCurve" : [1,2], //功率曲线散点
+    "speedCurve" : [1,2], //速度曲线
+    "speedScatterCurve" : [1,2], //速度曲线散点
+    "maxPower" : "0.0", //最大功率
+    "maxPowerLoad" : "0.0", //最大功率负荷
+    "bestPower" : "0.0", //最佳功率
+    "bestPowerLoad" : "0.0", //最佳功率负荷
+    "maxLoad" : "0.0", //最大负荷
+}
 ```
 参数说明:
 | 字段 | 说明                             |
 |---------|----------------------------------|
-| ecc   | 1 向心 2 离心 |
-| avgRfd | 平均Rfd |
-| energy | |
-| maxRfd | |
-| indexId | |
-| maxLoad | |
-| avgPower | |
-| avgSpeed | |
-| maxPower | |
-| maxSpeed | |
-| direction | |
-| targetRfd | |
-| indexGroup | |
-| resistance | |
-| targetLoad | |
-| targetPower | |
+| dataType | 0 训练 1 测试 |
+| actName | 动作名称 |
+| startTime | 开始训练时间 |
+| endTime | 训练结束时间 |
+| powerSet | 阻力设定，1-6组测试时每组的向心力和离心力设定，单位kg |
+| powerReal | 阻力实际值，1-6组测试时每组测试达到功率最大值时的实际阻力值，单位kg|
+| testData | 6组测试数据，每组测试最多可以有三个数据，每个数据表示当次测试达到的最大功率，单位W|
+| powerCurve | 功率曲线数据，用于画连续曲线，两个为一组，负荷(kg)+功率(W) |
+| powerScatterCurve | 功率曲线散点，用于画离散曲线，两个为一组，负荷(kg)+功率(W) |
+| speedCurve | 速度曲线数据，用于画连续曲线，两个为一组，负荷(kg)+速度(m/s) |
+| speedScatterCurve | 速度曲线散点，用于画离散曲线，两个为一组，负荷(kg)+速度(m/s) |
+| maxPower | 最大功率,单位W |
+| maxPowerLoad | 最大功率负荷，单位kg |
+| bestPower | 最佳功率，单位W|
+| bestPowerLoad | 最佳功率负荷，单位kg |
+| maxLoad | 最大负荷，单位kg |
 
 ## S230- 综合训练架
 
