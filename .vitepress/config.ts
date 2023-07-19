@@ -22,9 +22,9 @@ export default defineConfig({
       label: '本页目录'
     },
     algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: '',
+      appId: 'D18V0PRXRE',
+      apiKey: 'd8fa119ae988781ae67a9970add944ee',
+      indexName: 'eliga',
       searchParameters: {
         facetFilters: ['tags:cn']
       },
