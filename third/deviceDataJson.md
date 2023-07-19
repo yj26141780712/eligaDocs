@@ -39,7 +39,8 @@
         11
     ],
     "targetLoad": 0,
-    "targetPower": 0
+    "targetPower": 0,
+    "chart":[0,1,2,3,4]
     }
 ]
 ```
@@ -47,21 +48,22 @@
 | 字段 | 说明                             |
 |---------|----------------------------------|
 | ecc   | 1 向心 2 离心 |
-| avgRfd | 平均Rfd |
-| energy | |
-| maxRfd | |
-| indexId | |
-| maxLoad | |
-| avgPower | |
-| avgSpeed | |
-| maxPower | |
-| maxSpeed | |
-| direction | |
-| targetRfd | |
-| indexGroup | |
-| resistance | |
-| targetLoad | |
-| targetPower | |
+| avgRfd | 平均RFD，单位N/s |
+| energy | 能量消耗，单位焦耳 |
+| maxRfd | 峰值RFD，单位N/s  |
+| indexId | 曲线编号，从0开始 |
+| maxLoad | 峰值力量，单位lb |
+| avgPower | 平均功率，单位W |
+| avgSpeed | 平均速度，单位m/s |
+| maxPower | 峰值功率，单位W|
+| maxSpeed | 峰值速度，单位m/s |
+| direction | 方向，默认为1|
+| targetRfd | 目标RFD |
+| indexGroup | 本次训练id，由"0-"和开始训练时间戳组成 |
+| resistance | 离心模式和等张模式下，该值为向心力(lb)+离心力(lb);<br />等速模式下，该值为向心速度(m/s)；<br />末端释放模式下，该值为向心力(lb)；<br />弹性力模式下，该值为向心力(lb)+弹力等级；<br />流体阻力模式下，该值为向心力(lb)+阻力等级|
+| targetLoad | 目标力量 |
+| targetPower | 目标功率 |
+| chart | 曲线数据，数据格式为五个为一组，时间(ms)+位置(mm)+功率(W)+速度(m/s)+力量(lb) |
 
 ## S230- 综合训练架
 
