@@ -4,7 +4,7 @@ const app = express();
 const data = require("./routes/data");
 const { ws } = require("./routes/ws");
 const user = require("./routes/user");
-let bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 app.use(bodyParser.json({ limit: "40mb" }));
 app.use(bodyParser.urlencoded({ limit: "40mb", extended: true }));
@@ -17,7 +17,7 @@ app.all("*", (req, res, next) => {
         "Content-Type,Content-Length, Authorization, Accept,X-Requested-With,token,If-Modified-Since,lang"
     );
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-    res.header("X-Powered-By", " 3.2.1");
+    res.header("X-Powered-By", "3.2.1");
     if (req.method == "OPTIONS") {
         res.sendStatus(200);
     } else {

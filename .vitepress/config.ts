@@ -69,12 +69,18 @@ export default defineConfig({
           }
         },
       },
-    }
+    },
+    footer: {
+      copyright:
+        '本中文文档内容版权为 Eliga 团队所有，保留所有权利。',
+        // '本中文文档内容版权为 Eliga 团队所有，保留所有权利。<a href="https://beian.miit.gov.cn/">浙ICP备 20005303号-2</a>'
+    },
   },
 })
 
 function nav() {
   return [
+    { text: '首页', link: '/' },
     { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
   ]
 }
