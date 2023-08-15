@@ -81,6 +81,23 @@ export default defineConfig({
 function nav() {
   return [
     { text: '首页', link: '/' },
+    {
+      text: '接口文档',
+      items: [
+        {
+          text: 'pamfa接口文档',
+          link: 'https://console-docs.apipost.cn/preview/07cf07ee238fdc92/1c428496d745130e'
+        },
+        {
+          text: 'eliga接口文档(运维管理,面板App,个人App)',
+          link: 'https://console-docs.apipost.cn/preview/1b56b31af06fa3dc/389241c604fbcd74'
+        },
+        {
+          text: 'python人脸服务接口文档',
+          link: 'https://console-docs.apipost.cn/preview/bf36cf6f905e6b8d/04f8b862337c80aa'
+        }
+      ]
+    },
     { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
   ]
 }
