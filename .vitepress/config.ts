@@ -84,6 +84,7 @@ function nav() {
     {
       text: '接口文档',
       items: [
+        { text: '接口国际化', link: '/api/apiLang'},
         {
           text: 'pamfa接口文档',
           link: 'https://console-docs.apipost.cn/preview/07cf07ee238fdc92/1c428496d745130e'
@@ -104,6 +105,16 @@ function nav() {
 
 function sidebar() {
   return {
+    '/api/': [
+      {
+        text: '使用说明',
+        link: '/api/apiLang.md'
+      },
+      {
+        text: '语言说明',
+        link: '/api/lang.md'
+      }
+    ],
     '/third/': [
       {
         text: '从Pamfa系统获取数据',
