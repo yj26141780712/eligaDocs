@@ -113,6 +113,10 @@ function sidebar() {
       {
         text: '语言说明',
         link: '/api/lang.md'
+      },
+      {
+        text: 'mysql国际化方案',
+        link: '/api/databaseLang.md'
       }
     ],
     '/third/': [
