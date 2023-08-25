@@ -21,21 +21,14 @@
     "obj":{
        "id",
        "name":"分段计时",  // 原始值
-       "nameTr": {
-          "en_us":"Timing System",
-          "zh_cn":"分段计时",
-          "zh_tw":"分段计时",
-       }, // lang对应的翻译值,
+       "nameTr": "Timing System", // lang对应的翻译值,
        "desc":"",
-       "descTr": {
-
-       }
+       "descTr": ""
     }
 }
 ```
 注
 1.需要国际化的字段都会多一个字段名+Tr的字段 
-2.如果tr字段中没有对应的语言翻译,那就显示原始字段
 
 
 
