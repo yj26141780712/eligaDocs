@@ -5,3 +5,5 @@
 | 简体中文 |  zh_cn  |     简体中文     |
 | 繁体中文 |  zh_tw  |     繁体中文     |          
 | 英语     |  en_us  |     English     |
+| 日语     |  ja_jp  |     日本語     |
+| 越南语     |  vi_vn  |     Tiếng Việt     |
