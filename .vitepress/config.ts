@@ -73,7 +73,7 @@ export default defineConfig({
     footer: {
       copyright:
         '本中文文档内容版权为 Eliga 团队所有，保留所有权利。',
-        // '本中文文档内容版权为 Eliga 团队所有，保留所有权利。<a href="https://beian.miit.gov.cn/">浙ICP备 20005303号-2</a>'
+      // '本中文文档内容版权为 Eliga 团队所有，保留所有权利。<a href="https://beian.miit.gov.cn/">浙ICP备 20005303号-2</a>'
     },
   },
 })
@@ -84,7 +84,7 @@ function nav() {
     {
       text: '接口文档',
       items: [
-        { text: '接口国际化', link: '/api/apiLang'},
+        { text: '接口国际化', link: '/api/apiLang' },
         {
           text: 'pamfa接口文档',
           link: 'https://console-docs.apipost.cn/preview/07cf07ee238fdc92/1c428496d745130e'
@@ -100,6 +100,8 @@ function nav() {
       ]
     },
     { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
+    { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
+    { text: '软件版本', link: '/version/panel', activeMatch: '/version/' }
   ]
 }
 
@@ -137,6 +139,25 @@ function sidebar() {
         // items: [
         //   { text: '', link: '/third/deviceToThird.md' },
         // ]
+      }
+    ],
+    '/git/': [
+      {
+        text: 'commit 规范',
+        collapsed: false,
+        items: [
+          { text: 'commit 规范说明', link: '/git/commitGuide.md' },
+          { text: 'commit 自动提交配置', link: '/git/commitAuto.md' }
+        ]
+      }
+    ],
+    '/version/':[
+      {
+        text: '软件升级',
+        collapsed: false,
+        items: [
+          { text: '面便程序升级说明', link: '/version/panel.md' },
+        ]
       }
     ]
   }
