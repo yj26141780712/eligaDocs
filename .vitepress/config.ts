@@ -101,8 +101,8 @@ function nav() {
     },
     { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
     { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
-    { text: '软件版本', link: '/version/panel', activeMatch: '/version/' },
-    { text: '需求分析', link: '/demand/circuitTraining', activeMatch: '/demand/' }
+    { text: '软件管理', link: '/version/panel', activeMatch: '/version/' },
+    // { text: '需求分析', link: '/demand/circuitTraining', activeMatch: '/demand/' }
   ]
 }
 
@@ -154,19 +154,11 @@ function sidebar() {
     ],
     '/version/':[
       {
-        text: '软件升级',
+        text: '软件管理',
         collapsed: false,
         items: [
-          { text: '面便程序升级说明', link: '/version/panel.md' },
-        ]
-      }
-    ],
-    '/demand/':[
-      {
-        text: '软件升级',
-        collapsed: false,
-        items: [
-          { text: '面便程序升级说明', link: '/version/panel.md' },
+          { text: '程序上传', link: '/version/childupload.md' },
+          { text: '程序接口使用', link: '/version/panel.md' },
         ]
       }
     ]

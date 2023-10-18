@@ -308,6 +308,44 @@
 
 [同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
+## T181-跑步机
+| 设备类型代码（deviceType）  | 设备类型 | 设备名称
+|-------|--------|----------|
+| 17 |    T181    |  跑步机 |
+
+数据例子:
+```json
+{
+  "avgPace": 438, // 平均配速
+  "calorie": 4.953983, // 总消耗
+  "paceArr": [], // 配速曲线
+  "distance": 0.06841667, // 总距离
+  "avgStride": 0, // 平均步幅 
+  "strideArr": [], // 步幅曲线
+  "avgCadence": 0, // 平均步频
+  "cadenceArr": [], // 步频曲线
+  "avgFreeTime": 0, // 平均腾空时间
+  "freeTimeArr": [], // 腾空时间曲线
+  "avgTouchdownTime": 0, // 平均触地时间
+  "touchdownTimeArr": [] // 触地时间曲线
+}
+```
+参数说明:
+| 字段 | 说明                             |
+|---------|----------------------------------|
+| avgPace   | 平均配速 |
+| calorie   | 总消耗 |
+| paceArr   | 配速曲线  |
+| distance   | 总距离 |
+| avgStride   | 平均步幅  |
+| strideArr   | 步幅曲线 |
+| avgCadence   | 平均步频  |
+| cadenceArr  |  步频曲线  |
+| avgFreeTime   | 平均腾空时间 |
+| freeTimeArr   |  腾空时间曲线 |
+| avgTouchdownTime   | 平均触地时间  |
+| touchdownTimeArr   | 触地时间曲线  |
+
 ## T153-坐姿划船训练器
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
 |-------|--------|----------|
