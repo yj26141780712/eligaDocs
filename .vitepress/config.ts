@@ -158,7 +158,7 @@ function sidebar() {
         collapsed: false,
         items: [
           { text: '程序上传', link: '/version/childupload.md' },
-          { text: '程序接口使用', link: '/version/panel.md' },
+          { text: '请求最新程序', link: '/version/panel.md' },
         ]
       }
     ]
