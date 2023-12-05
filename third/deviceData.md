@@ -1,10 +1,10 @@
 # 获取设备数据
 
-获取设备数据
+获取设备数据（只返回运动员的数据）
 
 #### 接口调用请求说明
 
->http请求方式：GET http://ilive.eliga.cn/eliga/third/deviceData/deviceSn=T232-0001&stime=2023-07-01 00:00:00&etime=2023-07-02 00:00:00
+>http请求方式：GET http://ilive.eliga.cn/eliga/api/third/deviceData?deviceSn=T232-0001&stime=2023-07-01 00:00:00&etime=2023-07-02 00:00:00
 
 #### 请求头
 
