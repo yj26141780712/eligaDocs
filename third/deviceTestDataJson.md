@@ -274,20 +274,20 @@
 数据例子:
 ```json
 {
-    "dataType": 0, //0训练1测试
-	"modeName": "无飞行重量", //测试模式  等张 自然惯性 无飞行重量
+    "dataType": 1, //0训练1测试
+	"modeName": "无飞行重量", //测试模式  0:等张 1:自然惯性 2:无飞行重量
 	"modeId": 0, //模式ID
 	"curveData": [[0,1,2,3,4,5]],//[[时间,力,速度,位置,功率,加速度]]
     "startTime": "2023-07-19 14:10:25",//开始训练时间
     "endTime": "2023-07-19 14:10:40",//训练结束时间
-	"forceMode": 0, //力量模式值
-    "forceModeName": "变力", //力量模式 恒力 变力名称
-    "forceMethod": 0, //阻力模式 阻力，助力值
+	"forceMode": 0, //力量模式值 0:恒力 1:变力
+    "forceModeName": "变力", //力量模式名称 恒力 变力
+    "forceMethod": 0, //阻力模式值 0:阻力，1:助力
     "forceMethodName": "阻力", //阻力，助力名称
-    "forceModeParam": "5.5lb", //力量模式参数
-	"forceRatio": 0, // x1,x2 //系数
-    "recordType": 0, //记录模式:手动、时间、距离
-    "segmentationData": [], //0-100段数数据
+    "forceModeParam": "5.5lb", //力量模式参数设定值
+	"forceRatio": 0, // 0:x1,1:x2 //系数
+    "recordType": 0, //记录模式: 0:手动、1:时间、2:距离
+    "segmentationData": [], //0-100米段数数据
     "maxPower": 0, //最大功率 w
 	"maxSpeed": 0, //最大速度 m/s
 	"avgPower": 0, //平局功率 w
@@ -298,7 +298,7 @@
     "resistanceSpeed": "1m/s",//收绳速度 m/s
     "boostSpeed": "1m/s",//助力速度 m/s
 	"target": " ", //目标
-	"perform": " ", //完成    
+	"perform": " ", //完成 
 }
 ```
 参数说明:
