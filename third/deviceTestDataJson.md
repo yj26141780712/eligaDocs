@@ -293,7 +293,7 @@
 	"avgPower": 0, //平局功率 w
 	"avgSpeed": 0, //平局速度 m/s
     "maxLoad": 0, //最大力 N
-    "energy": 0, //功 w
+    "energy": 0, //功 J
     "distance": 0,//位置, m
     "resistanceSpeed": "1m/s",//收绳速度 m/s
     "boostSpeed": "1m/s",//助力速度 m/s
