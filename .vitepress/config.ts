@@ -102,7 +102,6 @@ function nav() {
     { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
     { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
     { text: '软件管理', link: '/version/panel', activeMatch: '/version/' },
-    // { text: '需求分析', link: '/demand/circuitTraining', activeMatch: '/demand/' }
   ]
 }
 
@@ -133,14 +132,14 @@ function sidebar() {
           { text: '设备测试数据结构', link: '/third/deviceTestDataJson' }
         ],
       },
-      {
-        text: '第三方系统接入设备',
-        // collapsed: false,
-        link: '/third/deviceToThird.md'
-        // items: [
-        //   { text: '', link: '/third/deviceToThird.md' },
-        // ]
-      }
+      // {
+      //   text: '第三方系统接入设备',
+      //   // collapsed: false,
+      //   link: '/third/deviceToThird.md'
+      //   // items: [
+      //   //   { text: '', link: '/third/deviceToThird.md' },
+      //   // ]
+      // }
     ],
     '/git/': [
       {
