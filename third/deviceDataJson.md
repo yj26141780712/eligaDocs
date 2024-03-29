@@ -9,6 +9,83 @@
 | 0 |    T130    |  VBT训练监测系统 |
 
 
+数据例子:
+```json
+{
+    "modeName": "自由测试",
+    "modeId": 1,
+    "teamName": "xx队伍",
+    "name":  "xx名字",
+    "startTime": "2024-03-29 14:16:15", 
+    "endTime": "2024-03-29 14:16:22",
+    "weightForce": "20",
+    "numberGroups": "5", 
+    "perform": 20, 
+    "trainTime": "00:55",
+    "direction": "先向心",
+    "actionName": "自由模式",
+    "actionId": 0,
+    "data": [
+                  {
+                    "maxPower": 275,
+                    "maxSpeed": 1.01,
+                    "avgPower": "135.3",
+                    "avgSpeed": "0.67",
+                    "maxLoad": 34.2,
+                    "ecc": 1,
+                    "energy": 67.64599999999999,
+                    "direction": 1,
+                    "indexGroup": "0-1711692975236",
+                    "indexId": 0,
+                    "chart":[0,1,2,3,4,5,6,7]
+                   }
+                 ],
+    "reportData": [],
+    "reportDataEcc": [],
+    "curveData": {},
+    "videoPathAll": [],
+    "videoCount": [],
+    "videoRecordTime": [],
+    "videoEndTime": [],
+    "videoStartTime": [],
+    "videoVisibleValue": [],
+}
+```
+参数说明:
+| 字段 | 说明                             |
+|---------|----------------------------------|
+| modeName   | 测试模式 |
+| modeId | 模式ID |
+| teamName | 测试队伍 |
+| name | 名字 |
+| startTime | 开始时间 |
+| endTime | 结束时间 |
+| weightForce | 重量设置 |
+| numberGroups | 组数 |
+| perform | 次数 |
+| trainTime | 训练时间 |
+| direction | 先向心，先离心 |
+| actionName | 动作名称 |
+| data[0].maxPower | 峰值功率，单位W |
+| data[0].maxSpeed | 峰值速度，单位m/s |
+| data[0].avgPower | 平均功率，单位W |
+| data[0].avgSpeed | 平均速度，单位m/s |
+| data[0].maxLoad | 峰值力量，单位kg |
+| data[0].ecc | 1 向心 2 离心 |
+| data[0].direction | 1 向心 2 离心 |
+| data[0].indexGroup | 本次训练id，由"0-"和开始训练时间戳组成 |
+| data[0].indexId | 曲线编号，从0开始 |
+| data[0].chart | 曲线数据，数据格式为五个为一组，时间(ms)+位置(mm)+功率(W)+速度(m/s)+轨迹图横坐标sinx(mm)+轨迹图纵坐标cosx(mm)+角度(°) |
+| reportData | 数据格式为四个为一组，向心峰值速度+向心平均速度+向心最大功率+向心平均功率 |
+| reportDataEcc | 数据格式为四个为一组，离心峰值速度+离心平均速度+离心最大功率+离心平均功率 |
+| curveData | 曲线模型，面板显示数据 |
+| videoPathAll | 视频保存地址 |
+| videoCount | 视频次数 |
+| videoRecordTime | 视频录制时间 |
+| videoEndTime | 视频结束时间 |
+| videoStartTime | 视频开始时间 |
+| videoVisibleValue | 视频是否显示标记值 |
+
 ## T232-无轨迹功能训练器
 
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
@@ -64,7 +141,7 @@
 | targetPower | 目标功率 |
 | chart | 曲线数据，数据格式为五个为一组，时间(ms)+位置(mm)+功率(W)+速度(m/s)+力量(lb) |
 
-## S230- 综合训练架
+## S230-综合训练架
 
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
 |-------|--------|----------|
@@ -266,16 +343,7 @@
 |-------|--------|----------|
 | 6 |    T168    |  深蹲训练器 |
 
-数据例子:
-```json
-{
-
-}
-```
-参数说明:
-| 字段 | 说明                             |
-|---------|----------------------------------|
-|    | |
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
 ## T120-冲刺训练器
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
@@ -364,23 +432,6 @@
 | 9 |    T110    |  高尔夫训练器 |
 
 [同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
-
-## T180-髋关节训练器
-| 设备类型代码（deviceType）  | 设备类型 | 设备名称
-|-------|--------|----------|
-| 10 |    T180    |  髋关节训练器 |
-
-数据例子:
-```json
-{
-
-}
-```
-参数说明:
-| 字段 | 说明                             |
-|---------|----------------------------------|
-|    | |
-
 
 ## T165-背部伸展训练器
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
@@ -512,22 +563,6 @@
 
 [同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
-## T133-分段计时
-| 设备类型代码（deviceType）  | 设备类型 | 设备名称
-|-------|--------|----------|
-| 23 |    T133    |  分段计时 |
-
-数据例子:
-```json
-{
-
-}
-```
-参数说明:
-| 字段 | 说明                             |
-|---------|----------------------------------|
-|    | |
-
 ## S231-多功能综合训练架
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
 |-------|--------|----------|
@@ -547,16 +582,7 @@
 |-------|--------|----------|
 | 27 |    T159    |  大腿蹬伸训练器 |
 
-数据例子:
-```json
-{
-
-}
-```
-参数说明:
-| 字段 | 说明                             |
-|---------|----------------------------------|
-|    | |
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
 ## T163-团队定位
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
@@ -580,21 +606,40 @@
 |-------|--------|----------|
 | 29 |    T171    |  坐姿提踵 |
 
-数据例子:
-```json
-{
-
-}
-```
-参数说明:
-| 字段 | 说明                             |
-|---------|----------------------------------|
-|    | |
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
 ## T157-肘关节伸展训练器
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
 |-------|--------|----------|
 | 30 |    T157    |  肘关节伸展训练器 |
+
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
+
+## T166-腹部屈曲训练器
+| 设备类型代码（deviceType）  | 设备类型 | 设备名称
+|-------|--------|----------|
+| 31 |    T166    |  腹部屈曲训练器 |
+
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
+
+## T138-VBT训练监测系统MINI版
+| 设备类型代码（deviceType）  | 设备类型 | 设备名称
+|-------|--------|----------|
+| 36 |   T138    |  VBT训练监测系统MINI版 |
+
+[同T130](/third/deviceDataJson.html#t130-vbt%E8%AE%AD%E7%BB%83%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F)
+
+## T170-短跑训练器
+| 设备类型代码（deviceType）  | 设备类型 | 设备名称
+|-------|--------|----------|
+| 38 |   T170    |  短跑训练器 |
+
+[同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
+
+## T169-立式髋关节训练器
+| 设备类型代码（deviceType）  | 设备类型 | 设备名称
+|-------|--------|----------|
+| 40 |   T169    |  立式髋关节训练器 |
 
 [同T160](/third/deviceDataJson.html#t160-%E5%A4%A7%E8%85%BF%E5%86%85%E6%94%B6%E8%AE%AD%E7%BB%83%E5%99%A8)
 
