@@ -417,13 +417,135 @@
 数据例子:
 ```json
 {
-12312
+    "userId": 1506, //用户ID
+    "deviceSn": "T13100N80008", //设备编号
+    "deviceName": "测力台",  //设备类型名称
+    "deviceType": "8",  //设备类型
+    "data": {
+        "err": {
+            "msg": "数据正常", //异常提示
+            "errCode": 0  //0数据正常，1数据异常
+        },
+        "RFDMax": 8460, //峰值RFD
+        "modeId": 0, //模式ID
+        "weight": 81.9, // 重量
+        "eccTime": 0, //离心时间 s
+        "endTime": "2024-03-28 09:54:44",
+        "perform": " ", //完成 
+	    "target": " ", //目标
+        "dataType": 1, //0训练1测试
+        "modeName": "Free(自由测试)",   //测试模式
+        "curveData": [[0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0]],//曲线数据 [[时间,功率,速度,合力,左脚力,右脚力，位置，平衡曲线]]
+        "peakForce": 3276,  //合力峰值  
+        "startTime": "2024-03-28 09:54:38",
+        "flightTime": 0, // 滞空时间 ms 
+        "conAvgForce": 0, //  向心平均力（N）
+        "conAvgPower": 0, //   向心平均功率（W）
+        "pushOffTime": 0, //蹬伸时间（s）
+        "conPeakForce": 0, //向心峰值力（N）
+        "conPeakPower": 0, //向心峰值功率（W）
+        "conPeakSpeed": 0, //向心峰值速度（m/s）
+        "eccPeakSpeed": 0, //离心峰值速度（m/s）
+        "leftMaxForce": 1683,  //左脚峰值
+        "peakForceRFD": 8460,  //peakForceRFD
+        "avgJoinForces": 805.2246963562756,  //峰值RFD集合
+        "rightMaxForce": 1732,  //右脚峰值
+        "eccForceImpulse": 0, ////离心冲量（Ns）
+        "brakingPhaseTime": 0, //制动时间（s）2
+        "relativeMaxForce": 0,  //向心相对最大力(BW%)
+        "relativeMaxPower": 0,  // "相对最大功率（W/kg）
+        "jumpHeightFlightTime": 0,// 基于腾空时间的纵跳高度（m）
+        "verticalTakeOffSpeed": 0, //起跳速度（m/s） 
+        "landingPeakForceRatio": 0,//左右侧落地峰值力比 
+        "pushOffFIForceImpulse": 0, //蹬伸冲量 Ns
+        "jumpHeightTakeOffSpeed": 0,  //V纵跳高度（m）
+        "concentricPeakForceRatio": 0, ////左右侧蹬伸峰值力比 
+        "pushOffFIForceImpulseRatio": 0,  //左右侧蹬伸冲量比
+        "reactiveStrengthIndexModifiedRSIMod": 0   //RSI 反应力量指数(m/s)
+    }
 }
 ```
 参数说明:
 | 字段 | 说明                             |
 |---------|----------------------------------|
-|    | |
+| 自由模式 0 自由模式 1 CMJ(反向跳) 2 SJ(深蹲跳)|----------------------------------|
+| userId | 用户ID |
+| deviceSn | 设备编号 |
+| deviceName | 设备类型名称 |
+| deviceType | 设备类型 |
+
+| data数据|
+| err.msg | 异常提示 |
+| err.errCode | 0 数据正常，1 数据异常 |
+| RFDMax | 峰值RFD |
+| modeId | 模式ID |
+| weight | 重量 |
+| eccTime | 离心时间 s |
+| endTime | 结束时间 |
+| perform | 完成 |
+| target | 目标 |
+| dataType | 0 训练 1 测试 |
+| modeName | 0 自由模式 1 CMJ(反向跳) 2 SJ(深蹲跳) 3 DJ(跳深) 4 IMTP(等长大腿中部拉) 5 CCMJ(连续纵跳)|
+| curveData | [[时间,功率,速度,合力,左脚力,右脚力，位置，平衡曲线]] |
+| peakForce | 合力峰值 |
+| 'timeA', 'timeB', 'timeC', 'timeD', 'timeE', 'timeF' | 曲线对应时间 |
+| startTime | 开始训练时间 |
+| flightTime | 滞空时间 ms |
+| conAvgForce | 向心平均力（N） |
+| conAvgPower | 向心平均功率（W） |
+| pushOffTime | 蹬伸时间（s） |
+| conPeakForce | 向心峰值力（N） |
+| conPeakPower | 向心峰值功率（W） |
+| conPeakSpeed | 向心峰值速度（m/s） |
+| eccPeakSpeed | 离心峰值速度（m/s） |
+| leftMaxForce | 左脚峰值 |
+| peakForceRFD | peakForceRFD |
+| avgJoinForces | 峰值RFD集合 |
+| rightMaxForce | 右脚峰值 |
+| eccForceImpulse | 离心冲量（Ns） |
+| brakingPhaseTime | 制动时间（s）2 |
+| relativeMaxForce | 向心相对最大力(BW%) |
+| relativeMaxPower | 相对最大功率（W/kg） |
+| jumpHeightFlightTime | 基于腾空时间的纵跳高度（m） |
+| verticalTakeOffSpeed | 起跳速度（m/s） |
+| landingPeakForceRatio | 左右侧落地峰值力比 |
+| pushOffFIForceImpulse | 蹬伸冲量 Ns |
+| jumpHeightTakeOffSpeed | V纵跳高度（m） |
+| concentricPeakForceRatio | 左右侧蹬伸峰值力比 |
+| pushOffFIForceImpulseRatio | 左右侧蹬伸冲量比 |
+| reactiveStrengthIndexModifiedRSIMod | RSI 反应力量指数(m/s) |
+| DJ(跳深) |----------------------------------|
+| eccAvgPower | 离心平均功率 |
+| eccPeakPower | 离心峰值功率 |
+| eccAvgForce | 离心平均力 |
+| eccPeakForce | 离心峰值力 |
+| conTime | 向心时间 |
+| IMTP(等长大腿中部拉) |----------------------------------|
+| peakForceImpt | 峰值力 |
+| relativePeakForce | 相对峰值力 |
+| specificTimeValue | 特定时间力值 |
+| rateForceDevelopment | 特定时间发力率 |
+| impulse | 特定时间冲量 |
+| peakForceDevelopmentTimeLeft | 峰值力发展时间 s 【左】 |
+| peakForceDevelopmentTimeRight | 峰值力发展时间 s 【右】 |
+| peakForceDevelopmentTimeJoin | 峰值力发展时间 s 【合】 |
+| peakForceHoldTimeLeft | 峰值力保持时间 s 【左】 |
+| peakForceHoldTimeRight | 峰值力保持时间 s 【右】 |
+| peakForceHoldTimeJoin | 峰值力保持时间 s 【合】 |
+| netMaxPeakForceLeft | 绝对峰值力  N 【左】 |
+| netMaxPeakForceRight | 绝对峰值力  N 【右】 |
+| specificTimeNetForceLeft | 特定时间绝对力 N 【左】 [[50,0],[100,0],[150,0],[200,0]] //50ms,100ms,150ms,200ms 0左/1右|
+| specificTimeNetForceRight | 特定时间绝对力 N 【右】 [[50,0],[100,0],[150,0],[200,0]] //50ms,100ms,150ms,200ms 0左/1右|
+| specificTimeRFDLeft | 特定时间RFD N/s 【左】 [[50,0],[100,0],[150,0],[200,0]] //50ms,100ms,150ms,200ms 0左/1右|
+| specificTimeRFDRight | 特定时间RFD N/s 【右】 |
+| specificTimeBalanceRatio | 特定时间平衡比 【左】 [[50,0],[100,0],[150,0],[200,0]] //50ms,100ms,150ms,200ms 0左/1右|
+| standardDeviation | 标准差 |
+| CCMJ(连续纵跳) |----------------------------------|
+| jumpHeightTakeOffSpeeds | V纵跳高度（m） |
+| flightTimes | 腾空时间（s） |
+| braceTimes | 支撑时间 |
+
+
 
 
 ## T110-高尔夫训练器
