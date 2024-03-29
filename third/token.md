@@ -4,7 +4,7 @@ token是全局唯一接口调用凭据，调用各接口时都需使用token。�
 
 ### 接口调用请求说明
 
-><span>http请求方式：GET ilive.eliga.cn/eliga/api/third/getToken?appid=APPID&secret=APPSECRET</span>
+><span>http请求方式：GET https://ilive.eliga.cn/eliga/api/third/getToken?appid=APPID&secret=APPSECRET</span>
 
 
 ### 参数说明
