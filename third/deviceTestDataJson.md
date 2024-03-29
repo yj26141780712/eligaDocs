@@ -123,13 +123,67 @@
 数据例子:
 ```json
 {
-
+	"dataType": 1, //0训练1测试
+	"modeName": "自由骑", //模式 
+	"modeId": 0, //模式ID 
+	"curveData": [[ 0,0.01,90.1,0.43,9.61,5.89,0],[]],//时间s,距离km,力量N,速度km/h,功率w，踏频rpm，心率bpm
+	"startTime": "2023-07-19 14:10:25",//开始训练时间 y-m-d h:m:s
+	"endTime": "2023-07-19 14:10:40",//训练结束时间
+	"totalTime": "00:00:07", //总时长
+	"totalDistance": 0.01, //总公里数 0.022km
+	"totalEnergy": 1.05, //总消耗 0.22kcal
+	"maxHeartRate": 0, //最大心率bpm
+	"avgHeartRate": 0, //平均心率bpm
+	"avgSpeed": 5.8, //平均速度 km/h
+	"maxSpeed": 8.48, //最大速度 km/h
+	"avgPower": 0, //平均功率 w
+	"maxPower": 1, //最大功率 w
+	"maxCadence": 2, //峰值踏频 rpm
+	"avgCadence": 2, //平均踏频 rpm
+	"maxForceAngleLeft": 50.1, //左脚峰值力量角度 °
+	"maxForceAngleRight": 50.2, //右脚峰值力量角度 °
+	"totalSymmetryLeft": 20, //左出力  45%
+	"totalSymmetryRight": 80, //右出力 55%
+	"powerWeight": 2.333, //功率/质量 w/kg
+	"avgRate": "10:20", //平均速率 m:s
+	"polarChartLists": [[], [[6.93,110.18]],//圈曲线，x,y值
+	"VO2max": 0, //最大摄氧量 ml/kg/min
+	"target": " ", //目标
+	"perform": " ", //完成 
 }
 ```
 参数说明:
 | 字段 | 说明                             |
 |---------|----------------------------------|
-|    | |
+|  dataType  | 0 训练 1 测试 |
+|  modeName  | 0 自由骑 	1 时间骑 2 距离骑 3 热量骑 4 心率骑 5 5s峰值功率 
+			   6 3分钟有氧  7 次大力量爬升 8 6s峰值功率 9 10分钟渐进 
+			   10 最大力量爬升 11 30s测试 12 FTP渐进 13 坡度变化 14 最大摄氧量 | 
+|  modeId 	 | 0 模式ID |
+|  curveData | 时间s,距离km,力量N,速度km/h,功率w,踏频rpm,心率bpm |
+|  startTime | 开始训练时间 y-m-d h:m:s |
+|  endTime   | 训练结束时间 |
+|  totalTime | 总时长 |
+|  totalDistance | 总公里数 0.022km |
+|  totalEnergy | 总消耗 0.22kcal |
+|  maxHeartRate | 最大心率bpm |
+|  avgHeartRate | 平均心率bpm |
+|  avgSpeed | 平均速度 km/h |
+|  maxSpeed | 最大速度 km/h |
+|  avgPower | 平均功率 w |
+|  maxPower | 最大功率 w |
+|  maxCadence | 峰值踏频 rpm |
+|  avgCadence | 平均踏频 rpm |
+|  maxForceAngleLeft | 左脚峰值力量角度 ° |
+|  maxForceAngleRight | 右脚峰值力量角度 ° |
+|  totalSymmetryLeft | 左出力  45% |
+|  totalSymmetryRight | 右出力 55% |
+|  powerWeight | 功率/质量 w/kg |
+|  avgRate | 平均速率 m:s |
+|  polarChartLists | 圈曲线，x,y值 |
+|  VO2max | 最大摄氧量 ml/kg/min |
+|  target | 目标 |
+|  perform | 完成 |
 
 ## T103-电控划船机
 | 设备类型代码（deviceType）  | 设备类型 | 设备名称
@@ -277,7 +331,7 @@
     "dataType": 1, //0训练1测试
 	"modeName": "无飞行重量", //测试模式  0:等张 1:自然惯性 2:无飞行重量
 	"modeId": 0, //模式ID
-	"curveData": [[0,1,2,3,4,5]],//[[时间,力,速度,位置,功率,加速度]]
+	"curveData": [[0,1,2,3,4,5]],//[[时间s,力N,速度m/s,位置m,功率w,加速度ms⁻²]]
     "startTime": "2023-07-19 14:10:25",//开始训练时间
     "endTime": "2023-07-19 14:10:40",//训练结束时间
 	"forceMode": 0, //力量模式值 0:恒力 1:变力
@@ -287,7 +341,8 @@
     "forceModeParam": "5.5lb", //力量模式参数设定值
 	"forceRatio": 0, // 0:x1,1:x2 //系数
     "recordType": 0, //记录模式: 0:手动、1:时间、2:距离
-    "segmentationData": [], //0-100米段数数据
+    "segmentationData": [{position: "0-0",segmentTime: 0,totalTime: 0,peakSpeed: 
+	0,avgSpeed: 0,peakPower: 0,avgPower: 0,peakForce: 0,avgForce: 0,maxAcc: 0,avgAcc: 0}], //'距离m', '分段时长s', '总时长s', '峰值速度m/s', '平均速度m/s', '峰值功率w', '平均功率w', '峰值力N', '平均力N','峰值加速度ms⁻²', '平均加速度ms⁻²' 0-100米段数数据
     "maxPower": 0, //最大功率 w
 	"maxSpeed": 0, //最大速度 m/s
 	"avgPower": 0, //平局功率 w
@@ -316,16 +371,16 @@
 | forceModeParam | 阻力模式名称 |
 | forceRatio | 系数 |
 | recordType | 记录模式 |
-| segmentationData | 段数数据 |
-| maxPower | 最大功率 |
-| maxSpeed | 最大速度 |
-| avgPower | 平局功率 |
-| avgSpeed | 平局速度 |
-| maxLoad | 最大力 |
-| energy | 功 |
-| distance | 位置 |
-| resistanceSpeed | 收绳速度 |
-| boostSpeed | 助力速度 |
+| segmentationData | 段数数据 '距离m', '分段时长s', '总时长s', '峰值速度m/s', '平均速度m/s', '峰值功率w', '平均功率w', '峰值力N', '平均力N','峰值加速度ms⁻²', '平均加速度ms⁻²' |
+| maxPower | 最大功率 W|
+| maxSpeed | 最大速度 m/s|
+| avgPower | 平局功率 W|
+| avgSpeed | 平局速度 m/s|
+| maxLoad | 最大力 N|
+| energy | 功 J|
+| distance | 位置 m|
+| resistanceSpeed | 收绳速度 m/s|
+| boostSpeed | 助力速度 m/s|
 | target | 目标 |
 | perform | 完成 |    
 
