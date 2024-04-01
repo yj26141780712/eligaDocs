@@ -20,7 +20,7 @@
 | stime | true  | 起始时间    |
 | etime | true  | 截止时间     |
 
-注意：目前三方凭证不开放申请，如有需要请联系开发人员获取
+注意：目前三方凭证不开放申请，请联系开发人员获取
 
 #### 返回说明
 
@@ -31,8 +31,7 @@
     "message":"ok",
     "data":[
         {
-           "id": 2,
-           "userId":2,
+           "thirdUserId": "",
            "userName":"运动员1号",
            "deviceType":"2",
            "deviceSn":"T232-001",
