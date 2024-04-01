@@ -473,8 +473,7 @@
 | deviceSn | 设备编号 |
 | deviceName | 设备类型名称 |
 | deviceType | 设备类型 |
-
-| data数据|
+| data数据 |
 | err.msg | 异常提示 |
 | err.errCode | 0 数据正常，1 数据异常 |
 | RFDMax | 峰值RFD |
