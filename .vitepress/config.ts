@@ -128,6 +128,8 @@ function sidebar() {
         items: [
           { text: '获取token', link: '/third/token' },
           { text: '人员信息导入', link: '/third/personImport' },
+          { text: '人员信息获取', link: '/third/personList' },
+          { text: '设备信息获取', link: '/third/deviceList' },
           { text: '获取设备实时数据', link: '/third/deviceRealData' },
           { text: '获取设备历史数据', link: '/third/deviceData' },
           { text: '设备训练数据结构', link: '/third/deviceDataJson' },
