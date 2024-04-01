@@ -4,7 +4,7 @@
 
 #### 接口调用请求说明
 
->http请求方式：GET http://ilive.eliga.cn/eliga/api/third/deviceData?deviceSn=T232-0001&stime=2023-07-01 00:00:00&etime=2023-07-02 00:00:00
+>http请求方式：GET https://ilive.eliga.cn/eliga/api/third/deviceData?deviceSn=T232-0001&stime=2023-07-01 00:00:00&etime=2023-07-02 00:00:00
 
 #### 请求头
 
@@ -20,7 +20,7 @@
 | stime | true  | 起始时间    |
 | etime | true  | 截止时间     |
 
-注意：目前三方凭证不开放申请，如有需要请联系开发人员获取
+注意：目前三方凭证不开放申请，请联系开发人员获取
 
 #### 返回说明
 
@@ -31,8 +31,7 @@
     "message":"ok",
     "data":[
         {
-           "id": 2,
-           "userId":2,
+           "thirdUserId": "",
            "userName":"运动员1号",
            "deviceType":"2",
            "deviceSn":"T232-001",

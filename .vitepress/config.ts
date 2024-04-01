@@ -6,18 +6,18 @@ export default defineConfig({
   title: "开发文档",
   description: "Eliga开发文档描述",
   base: '/eligaDocs/', // 这是部署到github相关的配置 下面会讲
-  locales: {
-    root: { label: '简体中文' },
-    en: { label: 'English', link: 'https://cn.vitejs.dev1' },
-  },
+  // locales: {
+  //   root: { label: '简体中文' },
+  //   en: { label: 'English', link: 'https://cn.vitejs.dev1' },
+  // },
   themeConfig: {
     logo: '/images/eliga.png',
     nav: nav(),
     sidebar: sidebar(),
-    editLink: {
-      pattern: 'https://github.com/yj26141780712/eligaDocs/edit/master/:path',
-      text: '为此页提供修改建议',
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/yj26141780712/eligaDocs/edit/master/:path',
+    //   text: '为此页提供修改建议',
+    // },
     outline: {
       label: '本页目录'
     },
@@ -81,27 +81,27 @@ export default defineConfig({
 function nav() {
   return [
     { text: '首页', link: '/' },
-    {
-      text: '接口文档',
-      items: [
-        { text: '接口国际化', link: '/api/apiLang' },
-        {
-          text: 'pamfa接口文档',
-          link: 'https://console-docs.apipost.cn/preview/07cf07ee238fdc92/1c428496d745130e'
-        },
-        {
-          text: 'eliga接口文档(运维管理,面板App,个人App)',
-          link: 'https://console-docs.apipost.cn/preview/1b56b31af06fa3dc/389241c604fbcd74'
-        },
-        {
-          text: 'python人脸服务接口文档',
-          link: 'https://console-docs.apipost.cn/preview/bf36cf6f905e6b8d/04f8b862337c80aa'
-        }
-      ]
-    },
-    { text: '第三方对接', link: '/third/token', activeMatch: '/third/' },
-    { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
-    { text: '软件管理', link: '/version/panel', activeMatch: '/version/' },
+    // {
+    //   text: '接口文档',
+    //   items: [
+    //     { text: '接口国际化', link: '/api/apiLang' },
+    //     {
+    //       text: 'pamfa接口文档',
+    //       link: 'https://console-docs.apipost.cn/preview/07cf07ee238fdc92/1c428496d745130e'
+    //     },
+    //     {
+    //       text: 'eliga接口文档(运维管理,面板App,个人App)',
+    //       link: 'https://console-docs.apipost.cn/preview/1b56b31af06fa3dc/389241c604fbcd74'
+    //     },
+    //     {
+    //       text: 'python人脸服务接口文档',
+    //       link: 'https://console-docs.apipost.cn/preview/bf36cf6f905e6b8d/04f8b862337c80aa'
+    //     }
+    //   ]
+    // },
+    { text: 'pamfa系统对接', link: '/third/token', activeMatch: '/third/' },
+    // { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
+    // { text: '软件管理', link: '/version/panel', activeMatch: '/version/' },
   ]
 }
 
@@ -123,11 +123,13 @@ function sidebar() {
     ],
     '/third/': [
       {
-        text: '从Pamfa系统获取数据',
+        text: 'pamfa系统对接',
         collapsed: false,
         items: [
           { text: '获取token', link: '/third/token' },
-          { text: '获取设备数据', link: '/third/deviceData' },
+          { text: '人员信息导入', link: '/third/personImport' },
+          { text: '获取设备实时数据', link: '/third/deviceRealData' },
+          { text: '获取设备历史数据', link: '/third/deviceData' },
           { text: '设备训练数据结构', link: '/third/deviceDataJson' },
           { text: '设备测试数据结构', link: '/third/deviceTestDataJson' }
         ],
@@ -141,25 +143,25 @@ function sidebar() {
       //   // ]
       // }
     ],
-    '/git/': [
-      {
-        text: 'commit 规范',
-        collapsed: false,
-        items: [
-          { text: 'commit 规范说明', link: '/git/commitGuide.md' },
-          { text: 'commit 自动提交配置', link: '/git/commitAuto.md' }
-        ]
-      }
-    ],
-    '/version/':[
-      {
-        text: '软件管理',
-        collapsed: false,
-        items: [
-          { text: '程序上传', link: '/version/childupload.md' },
-          { text: '请求最新程序', link: '/version/panel.md' },
-        ]
-      }
-    ]
+    // '/git/': [
+    //   {
+    //     text: 'commit 规范',
+    //     collapsed: false,
+    //     items: [
+    //       { text: 'commit 规范说明', link: '/git/commitGuide.md' },
+    //       { text: 'commit 自动提交配置', link: '/git/commitAuto.md' }
+    //     ]
+    //   }
+    // ],
+    // '/version/':[
+    //   {
+    //     text: '软件管理',
+    //     collapsed: false,
+    //     items: [
+    //       { text: '程序上传', link: '/version/childupload.md' },
+    //       { text: '请求最新程序', link: '/version/panel.md' },
+    //     ]
+    //   }
+    // ]
   }
 }
