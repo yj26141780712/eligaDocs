@@ -15,7 +15,7 @@
     }
 }
 ```
-设备data: [设备训练数据说明](/third/deviceDataJson.html),[设备测试数据说明](/third/deviceTestDataJson.html)
+设备data: [设备数据说明](/third/deviceDataJson.html)
 
 
 
