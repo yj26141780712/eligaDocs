@@ -2,15 +2,14 @@
 
 ### websocket连接说明
 
->Websocket请求方式： wss://ilive.eliga.cn/eliga/api/third/deviceRealTimeData?token=接口凭证
+>Websocket请求方式： wss://ilive.eliga.cn/ws/third/deviceRealTimeData?token=接口凭证
 
 ### 数据推送
 
 ```json
 {
-    "thirdUserId":"",
-    "name":"",
-    "deviceSn":"",
+    "userId":"", // pamfa系统用户唯一标识
+    "deviceSn":"", // 设备编号
     "data":{ //设备实时数据
       
     }
