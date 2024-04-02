@@ -8,8 +8,8 @@
 
 ```json
 {
-    "userId":"", // pamfa系统用户唯一标识
-    "deviceSn":"", // 设备编号
+    "userId": 2020, // pamfa系统用户唯一标识
+    "deviceSn":"T232-0001", // 设备编号
     "data":{ //设备实时数据
       
     }

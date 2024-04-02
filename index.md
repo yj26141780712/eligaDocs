@@ -1,10 +1,10 @@
 ---
 layout: home
 
-title: Eliga开发文档
-titleTemplate: Eliga开发文档
+title: Eliga说明文档
+titleTemplate: Eliga说明文档
 hero:
-  name: Eliga开发文档
+  name: Eliga说明文档
   tagline: 为开发提供极速响应
   actions:
     - theme: brand

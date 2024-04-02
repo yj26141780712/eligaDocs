@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: "开发文档",
-  description: "Eliga开发文档描述",
+  title: "说明文档",
+  description: "Eliga说明文档描述",
   base: '/eligaDocs/', // 这是部署到github相关的配置 下面会讲
   // locales: {
   //   root: { label: '简体中文' },
