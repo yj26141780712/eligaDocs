@@ -1,5 +1,5 @@
 # 人员信息列表
-获取pamfa人员信息列表
+获取pamfa外部系统导入的人员信息列表
 
 ### 接口调用请求说明
 >http请求方式：Get https://ilive.eliga.cn/eliga/api/third/pamfaUserList
