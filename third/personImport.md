@@ -1,5 +1,5 @@
 # 人员信息导入
-第三方系统用户系统导入pamfa用户系统
+外部用户系统导入pamfa用户系统
 
 ### 接口调用请求说明
 >http请求方式：POST https://ilive.eliga.cn/eliga/api/third/pamfaUserImport
