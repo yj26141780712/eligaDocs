@@ -450,7 +450,8 @@
         "rightMaxForce": 1732,  //右脚峰值
         "eccForceImpulse": 0, ////离心冲量（Ns）
         "brakingPhaseTime": 0, //制动时间（s）2
-        "relativeMaxForce": 0,  //向心相对最大力(BW%)
+        "relativeMaxForce": 20, //单位体重最大力量(N/kg) 
+        "relativeMaxStrength": 2, //相对最大力量(BW) 
         "relativeMaxPower": 0,  // "相对最大功率（W/kg）
         "jumpHeightFlightTime": 0,// 基于腾空时间的纵跳高度（m）
         "verticalTakeOffSpeed": 0, //起跳速度（m/s） 
@@ -459,7 +460,12 @@
         "jumpHeightTakeOffSpeed": 0,  //V纵跳高度（m）
         "concentricPeakForceRatio": 0, ////左右侧蹬伸峰值力比 
         "pushOffFIForceImpulseRatio": 0,  //左右侧蹬伸冲量比
-        "reactiveStrengthIndexModifiedRSIMod": 0   //RSI 反应力量指数(m/s)
+        "reactiveStrengthIndexModifiedRSIMod": 0,   //RSI 反应力量指数mod(m/s)
+        "rsi": 0, //RSI 反应力量指数(m/s)
+        "frequency": [[],[]], //踏频频率 [[左脚],[右脚]]
+
+
+
     }
 }
 ```
@@ -485,6 +491,7 @@
 | modeName | 0 自由模式 1 CMJ(反向跳) 2 SJ(深蹲跳) 3 DJ(跳深) 4 IMTP(等长大腿中部拉) 5 CCMJ(连续纵跳)|
 | curveData | [[时间,功率,速度,合力,左脚力,右脚力，位置，平衡曲线]] |
 | peakForce | 合力峰值 |
+| startPoint | 速度变化开始的点 |
 | 'timeA', 'timeB', 'timeC', 'timeD', 'timeE', 'timeF' | 曲线对应时间 |
 | startTime | 开始训练时间 |
 | flightTime | 滞空时间 ms |
@@ -510,7 +517,8 @@
 | jumpHeightTakeOffSpeed | V纵跳高度（m） |
 | concentricPeakForceRatio | 左右侧蹬伸峰值力比 |
 | pushOffFIForceImpulseRatio | 左右侧蹬伸冲量比 |
-| reactiveStrengthIndexModifiedRSIMod | RSI 反应力量指数(m/s) |
+| reactiveStrengthIndexModifiedRSIMod | RSImod 反应力量指数mod(m/s) |
+| rsi | RSI 反应力量指数(m/s) |
 | DJ(跳深) |----------------------------------|
 | eccAvgPower | 离心平均功率 |
 | eccPeakPower | 离心峰值功率 |
@@ -519,6 +527,7 @@
 | conTime | 向心时间 |
 | IMTP(等长大腿中部拉) |----------------------------------|
 | peakForceImpt | 峰值力 |
+| peakForceImpt+weight/peakForceImpt | 峰值力/净峰值力 |
 | relativePeakForce | 相对峰值力 |
 | specificTimeValue | 特定时间力值 |
 | rateForceDevelopment | 特定时间发力率 |
@@ -537,8 +546,11 @@
 | specificTimeRFDRight | 特定时间RFD N/s 【右】 |
 | specificTimeBalanceRatio | 特定时间平衡比 【左】 [[50,0],[100,0],[150,0],[200,0]] //50ms,100ms,150ms,200ms 0左/1右|
 | standardDeviation | 标准差 |
+| leftRightPeakForceGrowthRateComparison | 左右侧峰值力发展时间比 |
+| peakForceMomentComparison | 合力峰值力时刻左右比 | 
+
 | CCMJ(连续纵跳) |----------------------------------|
-| jumpHeightTakeOffSpeeds | V纵跳高度（m） |
+| jumpHeightTakeOffSpeeds | V纵跳高度（cm） |
 | flightTimes | 腾空时间（s） |
 | braceTimes | 支撑时间 |
 
