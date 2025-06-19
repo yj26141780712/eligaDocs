@@ -4,7 +4,7 @@
 
 ## 连接
 
-><span>采用websocket连接方式：ws://localhost:5174/third/ws/device?deviceSn=T152-001&deviceType=15</span>
+><span>采用websocket连接方式：ws://url/third/ws/device?deviceSn=T152-001&deviceType=15</span>
 
 ### 参数说明
 | 参数  | 说明                                    |
@@ -31,7 +31,7 @@
 ```
 
 ## 登录
-有三种登录方式：扫描登录、人脸登录和手环登录。
+有四种登录方式：扫描登录、人脸登录、手环登录和账号密码登录。
 
 ### 扫码登录
 - 第三方app扫描登录二维码，app使用二维码中的SN信息发送登录请求到第三方服务
@@ -50,7 +50,7 @@
         "weight": 60, // 体重
         "sex": 1, // 性别 0 男  1 女
         "age": 30, // 年龄
-        "setting": {} //设备类型码对应的设备相关参数，具体参数由客户端自行管理
+        "setting": {} //设备类型码对应的设备相关参数，具体参数由客户端自行管理, 若无数据则为空
     }
 }
 ```
@@ -86,7 +86,22 @@
     "event": "login",
     "data": {
         "type": "card",
-        "image": "12345678"
+        "nfcId": "12345678"
+    }
+}
+```
+
+登录返回同扫码登录
+
+### 账号密码登录
+- 客户端发送账号密码给服务器，格式如下：
+```json
+{
+    "event": "login",
+    "data": {
+        "type": "account",
+        "account": "12345678",
+        "password": "12345678"
     }
 }
 ```
@@ -161,7 +176,9 @@
 ## 训练数据发送
 
 - 使用HTTP POST协议进行数据传输
-  ><span>http://localhost:5174/third/api/data/uploadTrain</span>
+```
+http://url/third/api/data/uploadTrain
+```
 
 - 客户端发送训练数据给服务器，格式如下：
 ```json
@@ -187,7 +204,9 @@
 ## 测试数据发送
 
 - 使用HTTP POST协议进行数据传输
-  ><span>http://localhost:5174/third/api/data/uploadTest</span>
+```
+http://url/third/api/data/uploadTest
+```
 
 - 客户端发送测试数据给服务器，格式如下：
 ```json
