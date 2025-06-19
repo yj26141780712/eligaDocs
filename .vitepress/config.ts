@@ -133,7 +133,8 @@ function sidebar() {
           { text: '获取设备实时数据', link: '/third/deviceRealData' },
           { text: '获取设备历史数据', link: '/third/deviceData' },
           { text: '设备训练数据结构', link: '/third/deviceDataJson' },
-          { text: '设备测试数据结构', link: '/third/deviceTestDataJson' }
+          { text: '设备测试数据结构', link: '/third/deviceTestDataJson' },
+          { text: '第三方直连设备', link: '/third/deviceDirectToThird' }
         ],
       },
       // {
