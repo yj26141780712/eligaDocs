@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /third/deviceToThird.html
+      link: /third/token.html
     - theme: alt
       text: 在github上查看
       link: https://github.com/yj26141780712/eligaDocs

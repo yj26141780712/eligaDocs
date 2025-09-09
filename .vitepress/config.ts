@@ -99,7 +99,13 @@ function nav() {
     //     }
     //   ]
     // },
-    { text: 'pamfa系统对接', link: '/third/token', activeMatch: '/third/' },
+    {
+      text:"数据对接文档",
+      items:[
+        { text: '第三方平台对接Pamfa系统', link: '/third/token', activeMatch: '/third/' },
+        { text: '第三方平台对接设备', link: '/thirdSystem/deviceDirectToThird', activeMatch: '/thirdSystem/' },
+      ]
+    },
     // { text: 'Git相关', link: '/git/commitGuide', activeMatch: '/git/' },
     // { text: '软件管理', link: '/version/panel', activeMatch: '/version/' },
   ]
@@ -123,7 +129,7 @@ function sidebar() {
     ],
     '/third/': [
       {
-        text: 'pamfa系统对接',
+        text: '第三方平台对接Pamfa系统',
         collapsed: false,
         items: [
           { text: '获取token', link: '/third/token' },
@@ -133,38 +139,18 @@ function sidebar() {
           { text: '获取设备实时数据', link: '/third/deviceRealData' },
           { text: '获取设备历史数据', link: '/third/deviceData' },
           { text: '设备训练数据结构', link: '/third/deviceDataJson' },
-          { text: '设备测试数据结构', link: '/third/deviceTestDataJson' },
-          { text: '第三方直连设备', link: '/third/deviceDirectToThird' }
+          { text: '设备测试数据结构', link: '/third/deviceTestDataJson' }
         ],
-      },
-      // {
-      //   text: '第三方系统接入设备',
-      //   // collapsed: false,
-      //   link: '/third/deviceToThird.md'
-      //   // items: [
-      //   //   { text: '', link: '/third/deviceToThird.md' },
-      //   // ]
-      // }
+      }
     ],
-    // '/git/': [
-    //   {
-    //     text: 'commit 规范',
-    //     collapsed: false,
-    //     items: [
-    //       { text: 'commit 规范说明', link: '/git/commitGuide.md' },
-    //       { text: 'commit 自动提交配置', link: '/git/commitAuto.md' }
-    //     ]
-    //   }
-    // ],
-    // '/version/':[
-    //   {
-    //     text: '软件管理',
-    //     collapsed: false,
-    //     items: [
-    //       { text: '程序上传', link: '/version/childupload.md' },
-    //       { text: '请求最新程序', link: '/version/panel.md' },
-    //     ]
-    //   }
-    // ]
+    '/thirdSystem/': [
+      {
+        text: '第三方平台对接设备',
+        collapsed: false,
+        items: [
+          { text: '第三方直连设备', link: '/thirdSystem/deviceDirectToThird' }
+        ],
+      }
+    ]
   }
 }
