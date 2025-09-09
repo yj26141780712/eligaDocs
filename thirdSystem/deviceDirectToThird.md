@@ -5,13 +5,8 @@
 ## 登录
 - 使用HTTP POST协议进行登录
 ```
-http://url/third/api/device?deviceSn=T152-001&deviceType=15
+http://url/third/api/device
 ```
-### 参数说明
-| 参数  | 说明                                    |
-|------|-----------------------------------------|
-| deviceSn   |    设备唯一识别码SN      |
-| deviceType |    同一设备类型码，如T152-001和T152-002都属于T152设备       |
 
 有三种登录方式：人脸登录、手环登录和账号密码登录。
 
@@ -22,7 +17,9 @@ http://url/third/api/device?deviceSn=T152-001&deviceType=15
     "event": "login",
     "data": {
         "type": "face",
-        "image": "base64格式"
+        "image": "base64格式",
+        "deviceSn": "T152-001", //设备唯一识别码SN
+		"deviceType": 15 //同一设备类型码，如T152-001和T152-002都属于T152设备
     }
 }
 ```
@@ -61,7 +58,9 @@ http://url/third/api/device?deviceSn=T152-001&deviceType=15
     "event": "login",
     "data": {
         "type": "card",
-        "nfcId": "12345678"
+        "nfcId": "12345678",
+        "deviceSn": "T152-001", //设备唯一识别码SN
+		"deviceType": 15 //同一设备类型码，如T152-001和T152-002都属于T152设备
     }
 }
 ```
@@ -76,7 +75,9 @@ http://url/third/api/device?deviceSn=T152-001&deviceType=15
     "data": {
         "type": "account",
         "account": "12345678",
-        "password": "12345678"
+        "password": "12345678",
+        "deviceSn": "T152-001", //设备唯一识别码SN
+		"deviceType": 15 //同一设备类型码，如T152-001和T152-002都属于T152设备
     }
 }
 ```
