@@ -225,3 +225,116 @@ http://url/third/api/data/uploadTest
 }
 ```
 测试数据结构详见[设备测试数据结构](/third/deviceTestDataJson.md)
+
+## 训练计划请求
+- 使用HTTP GET协议请求训练计划(仅返回当天的训练计划)
+```
+http://url/third/api/trainPlan/getPlan?userId=10&deviceType=25
+```
+
+参数说明:
+| 字段 | 说明                             |
+|---------|----------------------------------|
+| userId | 用户唯一标识 |
+| deviceType | 同一设备类型码 |
+
+请求成功返回的数据结构如下：
+```json
+{
+    "code": 200, 
+    "message": "ok", 
+    "obj": [
+        {
+            "id": "517", //计划ID
+            "title": "张三的训练计划", //计划标题
+            "status": 0, //状态 0未开始 1进行中 2已完成 
+        },
+        {
+            "id": "518", //计划ID
+            "title": "李四的训练计划", //计划标题
+            "status": 0, //状态 0未开始 1进行中 2已完成
+        }
+    ]
+}
+```
+
+## 训练计划详情请求
+- 使用HTTP GET协议请求训练计划详情
+```
+http://url/third/api/trainPlan/getPlanDetail?planId=517
+```
+
+参数说明:
+| 字段 | 说明                             |
+|---------|----------------------------------|
+| planId | 计划ID |
+
+请求成功返回的数据结构如下：
+```json
+{
+    "code": 200, 
+    "message": "ok", 
+    "obj": {
+        "id": "517", //计划ID
+        "title": "张三的训练计划", //计划标题
+        "scheduleContent": [{
+            "id": "622", //动作ID
+            "deviceType": 1, //设备类型
+            "actionName": "T232-动作1", //设备标识-动作名称
+            "status": 0, //状态 0未完成 1已完成
+            "actionParams": [
+                {
+                    "unit": "", //单位
+                    "label": "组数", //名称
+                    "value": "Group", //关键字
+                    "paramValue": 3 //值
+                },
+                {
+                    "unit": "", //单位
+                    "label": "次数", //名称
+                    "value": "Reps", //关键字
+                    "paramValue": 10 //值
+                },
+                {
+                    "unit": "kg", //单位
+                    "label": "负重", //名称
+                    "value": "Weight", //关键字
+                    "paramValue": 10 //值
+                },
+                {
+                    "unit": "s", //单位
+                    "label": "间歇", //名称
+                    "value": "Intermission", //关键字
+                    "paramValue": 10 //值
+                }
+            ]
+        }]
+    }
+}
+```
+
+## 训练计划数据发送
+
+- 使用HTTP POST协议进行数据传输
+```
+http://url/third/api/trainPlan/completePlan
+```
+
+- 客户端发送训练计划数据给服务器，格式如下：
+```json
+{
+    "deviceSn": "T152-001", //设备编号
+    "userId": 10, //用户ID
+    "deviceType": "1", //设备类型
+    "scheduleId": "517", //计划id
+    "data": {
+        "actionId": "622", //动作ID
+        "actionName": "T232-动作1", //设备标识-动作名称
+        "dataType": 0, //0训练1测试
+        "startTime": "2025-03-13 11:50:57", //运动开始时间
+        "endTime": "2025-03-13 11:50:57", //运动结束时间
+        "data": [] //训练数据
+    }
+}
+```
+训练数据结构详见[设备训练数据结构](/third/deviceDataJson.md)
