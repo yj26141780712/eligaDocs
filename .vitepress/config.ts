@@ -102,7 +102,7 @@ function nav() {
     {
       text:"数据对接文档",
       items:[
-        { text: '数据结果说明', link: '/third/deviceDataJson', activeMatch: '/third/' },
+        { text: '数据结构说明', link: '/third/deviceDataJson', activeMatch: '/third/' },
         { text: '第三方平台对接设备', link: '/thirdSystem/deviceDirectToThird', activeMatch: '/thirdSystem/' },
       ]
     },
