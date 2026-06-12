@@ -129,7 +129,7 @@ function sidebar() {
     ],
     '/third/': [
       {
-        text: '数据结果说明',
+        text: '数据结构说明',
         collapsed: false,
         items: [
           // { text: '获取token', link: '/third/token' },
