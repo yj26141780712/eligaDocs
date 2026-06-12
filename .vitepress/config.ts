@@ -102,7 +102,7 @@ function nav() {
     {
       text:"数据对接文档",
       items:[
-        { text: '第三方平台对接Pamfa系统', link: '/third/token', activeMatch: '/third/' },
+        { text: '数据结果说明', link: '/third/token', activeMatch: '/third/' },
         { text: '第三方平台对接设备', link: '/thirdSystem/deviceDirectToThird', activeMatch: '/thirdSystem/' },
       ]
     },
@@ -129,15 +129,15 @@ function sidebar() {
     ],
     '/third/': [
       {
-        text: '第三方平台对接Pamfa系统',
+        text: '数据结果说明',
         collapsed: false,
         items: [
-          { text: '获取token', link: '/third/token' },
-          { text: '人员信息导入', link: '/third/personImport' },
-          { text: '人员信息获取', link: '/third/personList' },
-          { text: '设备信息获取', link: '/third/deviceList' },
-          { text: '获取设备实时数据', link: '/third/deviceRealData' },
-          { text: '获取设备历史数据', link: '/third/deviceData' },
+          // { text: '获取token', link: '/third/token' },
+          // { text: '人员信息导入', link: '/third/personImport' },
+          // { text: '人员信息获取', link: '/third/personList' },
+          // { text: '设备信息获取', link: '/third/deviceList' },
+          // { text: '获取设备实时数据', link: '/third/deviceRealData' },
+          // { text: '获取设备历史数据', link: '/third/deviceData' },
           { text: '设备训练数据结构', link: '/third/deviceDataJson' },
           { text: '设备测试数据结构', link: '/third/deviceTestDataJson' }
         ],
